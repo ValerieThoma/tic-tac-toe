@@ -2,6 +2,8 @@
 var whosTurn = 1;
 var player1Squares = [];
 var player2Squares = [];
+var player1Img = "<img src='boJack.jpg'/>";
+var player2Img = "<img src='mrPeanutButter.jpg'/>";
 var winningCombos = [
 
 	["A1", "B1", "C1"],
@@ -37,14 +39,14 @@ function markSquare(squareClicked){
 	if(squareClicked.innerHTML !== '-'){
 		document.getElementById('message').innerHTML = "Sorry, that square is taken."
 	}else if(whosTurn === 1){
-		squareClicked.innerHTML = "X";
+		squareClicked.innerHTML = player1Img;
 		whosTurn = 2;
 		player1Squares.push(squareClicked.id)
 		console.log(player1Squares)
 		document.getElementById('message').innerHTML = ""
 		checkWin(player1Squares,1);
 	}else{
-		squareClicked.innerHTML = "O";
+		squareClicked.innerHTML = player2Img;
 		whosTurn = 1;
 		player2Squares.push(squareClicked.id)
 		document.getElementById('message').innerHTML = ""
@@ -95,5 +97,5 @@ nextGame.addEventListener("click", function(event){
 
 
 
-// console.dir(document);
+console.dir(document);
 

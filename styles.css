@@ -12,6 +12,9 @@ h1{
 	text-shadow: -1px 3px 2px black;
 
 }
+img{
+	max-width: 100%;
+}
 #board{
 	max-width: 640px;
 	min-width: 320px;
