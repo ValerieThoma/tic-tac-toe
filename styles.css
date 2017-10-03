@@ -12,13 +12,28 @@ h1{
 	text-shadow: -1px 3px 2px black;
 
 }
+h3{
+	color: silver;
+	font-size: 30px;
+	text-shadow: 1px -1px 2px black;
+	/*font-family: "Arial Black", "Arial Bold", Gadget, sans-serif;*/
+	/*font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;*/
+	
+
+
+}
+span{
+	font-size: 20px;
+	color: black;
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+}
 img{
 	max-width: 100%;
 }
 #board{
 	max-width: 640px;
 	min-width: 320px;
-	float: none;
+	/*float: none;*/
 	margin: auto;
 }
 .square{
@@ -45,4 +60,14 @@ img{
 }
 #reset{
 	background-color: #f2b4b6;
+}
+.p1-score, .p2-score{
+	margin-left: 10px;
+	font-size: 30px;
+}
+.scores{
+	margin-top: 40px;
+}
+.score-img{
+	border-radius: 50%;
 }

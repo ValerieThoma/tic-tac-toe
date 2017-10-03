@@ -23,6 +23,11 @@ var squares = document.getElementsByClassName("square");
 
 var nextGame = document.getElementById("reset");
 
+var scores = [
+	0,
+	0
+]
+
 
 for (let i = 0; i < squares.length; i++){
 	// console.log(square[i]);
@@ -45,14 +50,29 @@ function markSquare(squareClicked){
 		console.log(player1Squares)
 		document.getElementById('message').innerHTML = ""
 		checkWin(player1Squares,1);
+		
+		// if(numPlayers == 1){
+		// 	comperterMove();
+		// }
 	}else{
 		squareClicked.innerHTML = player2Img;
 		whosTurn = 1;
 		player2Squares.push(squareClicked.id)
-		document.getElementById('message').innerHTML = ""
+		document.getElementById('message').innerHTML = "Is this a cross-over episode?"
 		checkWin(player2Squares,2);
 	}
 }
+// function computerMove() {
+// 	var squareFound =false;
+// 	while(!squareFound){
+// 		rand = Math.
+// 		var isTaken = squares[rand].innerHTML;
+// 		if(isTaken === "-"){
+// 			squareFound = true;
+// 		}
+// 	}
+// 	markSquare(rand)
+// }
 
 function checkWin(currentPlayerSquares,whoJustMarked) {
 	for (let i = 0; i < winningCombos.length; i++){
@@ -71,11 +91,18 @@ function checkWin(currentPlayerSquares,whoJustMarked) {
 }
 
 function endGame(winningCombo, whoJustMarked){
+	if(whoJustMarked === 1){
+		scores[0]++;	
+	}else{
+		scores[1]++;
+	}
 	document.getElementById('message').innerHTML = `Congrats to player ${whoJustMarked}!`
 	gameOver = true;
 	for(let i = 0; i < winningCombo.length; i++){
 		document.getElementById(winningCombo[i]).className += " winning-square";
 	}
+	document.getElementsByClassName("p1-score")[0].innerHTML = scores[0];
+	document.getElementsByClassName("p2-score")[0].innerHTML = scores[1];
 }
 
 function clearBoard(allSquares){
