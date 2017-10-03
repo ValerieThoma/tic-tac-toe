@@ -1,0 +1,45 @@
+
+body{
+	background-image: url("https://jaleblanc.files.wordpress.com/2016/02/bjh_bg_000_bojackshouse_living_room_int_a_al_v09_texture.png?w=1091");
+	background-size: cover;
+	background-repeat: no-repeat;
+
+}
+
+h1{
+	color: silver;
+	font-size: 70px;
+	text-shadow: -1px 3px 2px black;
+
+}
+#board{
+	max-width: 640px;
+	min-width: 320px;
+	float: none;
+	margin: auto;
+}
+.square{
+	background-color: #fff;
+	border: 2px solid #000;
+	outline: none;
+	width: 185px;
+	height: 185px;
+	font-size: 60px;
+}
+.square:hover{
+	background-color: #FEF9E7;
+}
+#message{
+	font-size: 40px;
+	min-height: 80px;
+}
+.winning-square{
+	background-color: #b3ebf3;
+}
+.new-game{
+	margin-top: 20px;
+	justify-content: center;
+}
+#reset{
+	background-color: #f2b4b6;
+}
